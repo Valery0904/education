@@ -1,4 +1,4 @@
-package academItSchool.coursework;
+package AcademItSchool.Coursework;
 
 import java.util.Scanner;
 

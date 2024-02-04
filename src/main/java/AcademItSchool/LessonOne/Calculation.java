@@ -1,4 +1,4 @@
-package academItSchool.LessonOne;
+package AcademItSchool.LessonOne;
 
 public class Calculation {
     public static void main(String[] args) {

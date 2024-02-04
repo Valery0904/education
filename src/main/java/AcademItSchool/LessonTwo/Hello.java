@@ -1,4 +1,4 @@
-package academItSchool.LessonTwo;
+package AcademItSchool.LessonTwo;
 
 import java.util.Scanner;
 
