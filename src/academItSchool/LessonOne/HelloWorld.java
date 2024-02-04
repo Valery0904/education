@@ -1,4 +1,4 @@
-package academItSchool.lessonOne;
+package academItSchool.LessonOne;
 
 public class HelloWorld {
     public static void main(String[] args) {
