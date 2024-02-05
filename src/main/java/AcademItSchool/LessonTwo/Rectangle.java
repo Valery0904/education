@@ -6,10 +6,10 @@ public class Rectangle {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Ведите длину прямоугольника:");
+        System.out.println("Введите длину прямоугольника:");
         double rectangleLength = scanner.nextDouble();
 
-        System.out.println("Ведите ширину прямоугольника:");
+        System.out.println("Введите ширину прямоугольника:");
         double rectangleWidth = scanner.nextDouble();
 
         double rectangleArea = rectangleLength * rectangleWidth;
