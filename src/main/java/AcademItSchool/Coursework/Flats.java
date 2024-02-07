@@ -16,16 +16,14 @@ public class Flats {
         int flatNumber = scanner.nextInt();
 
         int flatsCountOnFloor = 4;
-        boolean flatCountLessPossibles = flatNumber <= 0;
-        boolean flatCountMorePossibles = flatNumber > floorsCount * entrancesCount * flatsCountOnFloor;
 
-        if (flatCountLessPossibles || flatCountMorePossibles) {
+        if (flatNumber <= 0 || flatNumber > floorsCount * entrancesCount * flatsCountOnFloor) {
             System.out.println("Такой квартиры не существует!");
         } else {
-            int entrancesNumber = (int) Math.ceil((double) flatNumber / flatsCountOnFloor / floorsCount);
-            int floorNumber = (int) Math.ceil((double) flatNumber / flatsCountOnFloor) - (entrancesNumber - 1) * floorsCount;
+            int entranceNumber = (int) Math.ceil((double) flatNumber / flatsCountOnFloor / floorsCount);
+            int floorNumber = (int) Math.ceil((double) flatNumber / flatsCountOnFloor) - (entranceNumber - 1) * floorsCount;
 
-            System.out.printf("Квартира №%d находится в подъезде №%d на %d этаже, ", flatNumber, entrancesNumber, floorNumber);
+            System.out.printf("Квартира №%d находится в подъезде №%d на %d этаже, ", flatNumber, entranceNumber, floorNumber);
 
             int flatPosition = flatNumber % flatsCountOnFloor;
 
