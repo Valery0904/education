@@ -20,8 +20,8 @@ public class MaxMin {
             System.out.printf("Наибольшее число = %.2f%nНаименьшее число = %.2f%n", numberTwo, numberOne);
         }
 
-        double max = (numberOne > numberTwo) ? numberOne : numberTwo;
-        double min = (numberOne < numberTwo) ? numberOne : numberTwo;
+        int max = (numberOne > numberTwo) ? numberOne : numberTwo;
+        int min = (numberOne < numberTwo) ? numberOne : numberTwo;
         System.out.printf("Наибольшее число = %.2f%nНаименьшее число = %.2f%n", max, min);
     }
 }
