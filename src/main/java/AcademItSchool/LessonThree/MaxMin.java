@@ -7,20 +7,21 @@ public class MaxMin {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите первое число: ");
-        double firstNumber = scanner.nextDouble();
+        int numberOne = scanner.nextInt();
 
         System.out.print("Введите второе число: ");
-        double secondNumber = scanner.nextDouble();
+        int numberTwo = scanner.nextInt();
 
-        if (firstNumber == secondNumber) {
+        if (numberOne == numberTwo) {
             System.out.println("Числа равны");
-        } else if (firstNumber > secondNumber) {
-            System.out.printf("Наибольшее = %.2f%nНаименьшее = %.2f%n", firstNumber, secondNumber);
+        } else if (numberOne > numberTwo) {
+            System.out.printf("Наибольшее число = %.2f%nНаименьшее число = %.2f%n", numberOne, numberTwo);
         } else {
-            System.out.printf("Наибольшее = %.2f%nНаименьшее = %.2f%n", secondNumber, firstNumber);
+            System.out.printf("Наибольшее число = %.2f%nНаименьшее число = %.2f%n", numberTwo, numberOne);
         }
 
-        double max = (firstNumber > secondNumber) ? firstNumber : secondNumber;
-        System.out.println("Наибольшее число = " + max);
+        double max = (numberOne > numberTwo) ? numberOne : numberTwo;
+        double min = (numberOne < numberTwo) ? numberOne : numberTwo;
+        System.out.printf("Наибольшее число = %.2f%nНаименьшее число = %.2f%n", max, min);
     }
 }
