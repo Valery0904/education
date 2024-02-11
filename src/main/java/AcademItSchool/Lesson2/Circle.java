@@ -1,4 +1,4 @@
-package AcademItSchool.LessonTwo;
+package AcademItSchool.Lesson2;
 
 public class Circle {
     public static void main(String[] args) {

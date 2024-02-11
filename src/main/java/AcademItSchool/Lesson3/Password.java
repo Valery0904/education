@@ -1,4 +1,4 @@
-package AcademItSchool.LessonThree;
+package AcademItSchool.Lesson3;
 
 import java.util.Scanner;
 public class Password {

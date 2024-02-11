@@ -1,4 +1,4 @@
-package AcademItSchool.LessonTwo;
+package AcademItSchool.Lesson2;
 
 public class ExpressionsEvaluation {
     public static void main(String[] args) {
