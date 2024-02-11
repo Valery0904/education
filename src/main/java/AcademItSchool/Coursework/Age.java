@@ -6,16 +6,17 @@ public class Age {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("введите ваш возраст");
+        System.out.println("Введите ваш возраст:");
         int age = scanner.nextInt();
 
         int ageLastDigit = age % 10;
+        int ageBetween11And14Years = age % 100;
 
         if (age < 1) {
             System.out.println("Вы слишком малы!");
         } else if (age > 112) {
             System.out.println("Вы слишком стары!");
-        } else if (age % 100 >= 11 && age % 100 <= 14) {
+        } else if (ageBetween11And14Years >= 11 && ageBetween11And14Years <= 14) {
             System.out.printf("Вам %d лет%n", age);
         } else if (ageLastDigit == 1) {
             System.out.printf("Вам %d год%n", age);
