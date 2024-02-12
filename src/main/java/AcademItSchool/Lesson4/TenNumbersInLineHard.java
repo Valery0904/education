@@ -1,12 +1,19 @@
 package AcademItSchool.Lesson4;
 
+import java.util.Scanner;
+
 public class TenNumbersInLineHard {
     public static void main(String[] args) {
-        int startNumber = 3;
-        int endNumber = 22;
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Введите количество чисел в строке: "); // Заменить на принт
-        int numbersCountInLine = 6; //добавить сканер
+        System.out.print("Введите начальное число: ");
+        int startNumber = scanner.nextInt();
+
+        System.out.print("Введите конечное число: ");
+        int endNumber = scanner.nextInt();
+
+        System.out.print("Введите количество чисел в строке: ");
+        int numbersCountInLine = scanner.nextInt();
 
         int i = startNumber;
         int numbersCount = 0;
