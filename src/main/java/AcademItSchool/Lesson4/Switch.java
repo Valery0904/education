@@ -17,16 +17,16 @@ public class Switch {
 
         switch (commandCode) {
             case 1:
-                System.out.println(number1 + number2);
+                System.out.println("Сумма чисел = " + (number1 + number2));
                 break;
             case 2:
-                System.out.println(number1 - number2);
+                System.out.println("Разность чисел = " + (number1 - number2));
                 break;
             case 3:
-                System.out.println(number1 * number2);
+                System.out.println("Произведение чисел = " + (number1 * number2));
                 break;
             case 4:
-                System.out.println(number1 / number2);
+                System.out.println("Частное чисел = " + (number1 / number2));
                 break;
             default:
                 System.out.println("Код команды неверный");
