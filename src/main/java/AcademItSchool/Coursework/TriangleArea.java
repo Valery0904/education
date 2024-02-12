@@ -24,7 +24,7 @@ public class TriangleArea {
         double epsilon = 1.0e-10;
 
         if (Math.abs((x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)) <= epsilon) {
-            System.out.println("Points lie on one straight line");
+            System.out.println("Точки лежат на одной прямой");
         } else {
             double cutAbLength = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
             double cutBcLength = Math.sqrt(Math.pow(x3 - x2, 2) + Math.pow(y3 - y2, 2));
