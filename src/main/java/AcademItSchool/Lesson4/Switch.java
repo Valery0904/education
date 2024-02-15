@@ -26,7 +26,7 @@ public class Switch {
                 System.out.println("Произведение чисел = " + (number1 * number2));
                 break;
             case 4:
-                System.out.println("Частное чисел = " + (number1 / number2));
+                System.out.println("Частное чисел = " + ((double) number1 / number2));
                 break;
             default:
                 System.out.println("Код команды неверный");
