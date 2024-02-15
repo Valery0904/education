@@ -2,7 +2,7 @@ package AcademItSchool.Lesson4;
 
 import java.util.Scanner;
 
-public class NumbersDigit {
+public class NumberDigits {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -15,21 +15,22 @@ public class NumbersDigit {
         int maxDigit = 0;
 
         while (number != 0) {
-            digitsSum += number % 10;
+            int digit = number % 10;
+            digitsSum += digit;
 
             if (number % 2 == 0) {
-                positiveDigitsSum += number % 10;
+                positiveDigitsSum += digit;
             }
 
-            if (maxDigit < number % 10) {
-                maxDigit = number % 10;
+            if (maxDigit < digit) {
+                maxDigit = digit;
             }
 
             number /= 10;
         }
 
         System.out.printf("Сумма чисел = %d%n", digitsSum);
-        System.out.printf("Сумма четных чисел = %d%n", positiveDigitsSum);
+        System.out.printf("Сумма четных = %d%n", positiveDigitsSum);
         System.out.printf("Максимальная цифра числа = %d%n", maxDigit);
     }
 }
