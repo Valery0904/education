@@ -23,6 +23,7 @@ public class ArithmeticMeanDoWhile {
         } while (i <= endNumber);
 
         double average = (double) sum / count;
+
         System.out.println("Среднее арифметическое всех чисел = " + average);
 
         // Вычисляем сумму четных чисел.
@@ -40,6 +41,7 @@ public class ArithmeticMeanDoWhile {
         } while (j <= endNumber);
 
         double evenNumbersAverage = (double) evenNumbersSum / evenNumbersCount;
+
         System.out.println("Среднее арифметическое четных чисел = " + evenNumbersAverage);
     }
 }
