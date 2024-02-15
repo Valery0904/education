@@ -31,6 +31,7 @@ public class ArithmeticMean {
 
         double average = (double) sum / count;
         double evenNumbersAverage = (double) evenNumbersSum / evenNumbersCount;
+
         System.out.println("Среднее арифметическое всех чисел = " + average);
         System.out.println("Среднее арифметическое четных чисел = " + evenNumbersAverage);
     }
