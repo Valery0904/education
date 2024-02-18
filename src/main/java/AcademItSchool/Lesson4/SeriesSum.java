@@ -21,6 +21,6 @@ public class SeriesSum {
             i++;
         }
 
-        System.out.println("Сумма чисел в серии6: " + sum);
+        System.out.println("Сумма чисел в серии: " + sum);
     }
 }

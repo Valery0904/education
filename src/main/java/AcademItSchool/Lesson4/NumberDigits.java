@@ -6,20 +6,20 @@ public class NumberDigits {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите число, сумму цифр, сумму положительных цифр и максимальную цифру числа которого, " +
+        System.out.print("Введите число, сумму цифр, сумму нечетных цифр и максимальную цифру числа которого, " +
                 "вы хотите найти: ");
         int number = scanner.nextInt();
 
         int digitsSum = 0;
-        int positiveDigitsSum = 0;
+        int oddDigitsSum = 0;
         int maxDigit = 0;
 
         while (number != 0) {
             int digit = number % 10;
             digitsSum += digit;
 
-            if (number % 2 == 0) {
-                positiveDigitsSum += digit;
+            if (digit % 2 == 1) {
+                oddDigitsSum += digit;
             }
 
             if (maxDigit < digit) {
@@ -29,8 +29,8 @@ public class NumberDigits {
             number /= 10;
         }
 
-        System.out.printf("Сумма чисел = %d%n", digitsSum);
-        System.out.printf("Сумма четных = %d%n", positiveDigitsSum);
+        System.out.printf("Сумма цифр числа = %d%n", digitsSum);
+        System.out.printf("Сумма нечетных цифр числа = %d%n", oddDigitsSum);
         System.out.printf("Максимальная цифра числа = %d%n", maxDigit);
     }
 }
