@@ -9,7 +9,7 @@ public class PrimeNumber {
         System.out.print("Введите число: ");
         int number = scanner.nextInt();
 
-        System.out.println("Простые числа не превышающие число " + number + ": ");
+        System.out.print("Простые числа не превышающие число " + number + ": ");
 
         for (int i = 2; i <= number; i++) {
             boolean isPrime = true;
