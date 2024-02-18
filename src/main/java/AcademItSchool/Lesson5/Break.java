@@ -10,9 +10,9 @@ public class Break {
             Scanner scanner = new Scanner(System.in);
 
             System.out.print("Введите строку: ");
-            String newString = scanner.nextLine();
+            String enteredString = scanner.nextLine();
 
-            if (newString.equals(string)) {
+            if (enteredString.equals(string)) {
                 System.out.print("Строка введена верно");
                 break;
             }
