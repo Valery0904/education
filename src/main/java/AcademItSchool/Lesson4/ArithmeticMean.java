@@ -13,8 +13,10 @@ public class ArithmeticMean {
         int endNumber = scanner.nextInt();
 
         int i = startNumber;
+
         int sum = 0;
         int count = 0;
+
         int evenNumbersSum = 0;
         int evenNumbersCount = 0;
 
