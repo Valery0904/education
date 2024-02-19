@@ -3,7 +3,6 @@ package AcademItSchool.Lesson6;
 import java.util.Scanner;
 
 public class PrintAndRead {
-
     public static int printAndRead(String line) {
         Scanner scanner = new Scanner(System.in);
 
@@ -18,7 +17,7 @@ public class PrintAndRead {
         int sum = printAndRead("Введите число, которое будет результатом сложения числа 5 и числа 3: ");
         System.out.println("5 + 3 = " + sum);
 
-        int birthYear = printAndRead("Введите свой год рождкния: ");
-        System.out.println("Вы роодились в " + birthYear);
+        int birthYear = printAndRead("Введите свой год рождения: ");
+        System.out.println("Вы родились в " + birthYear);
     }
 }
