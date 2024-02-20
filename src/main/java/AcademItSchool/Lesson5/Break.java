@@ -15,9 +15,9 @@ public class Break {
             if (enteredString.equals(string)) {
                 System.out.println("Строка введена верно");
                 break;
-            } else {
-                System.out.println("Строка введена неверно, попробуй еще");
             }
+
+            System.out.println("Строка введена неверно, попробуй еще");
         }
     }
 }
