@@ -10,13 +10,13 @@ public class Age {
         int age = scanner.nextInt();
 
         int ageLastDigit = age % 10;
-        int ageBetween11And14Years = age % 100;
+        int ageLastTwoDigits = age % 100;
 
         if (age < 1) {
             System.out.println("Вы слишком малы!");
         } else if (age > 112) {
             System.out.println("Вы слишком стары!");
-        } else if (ageBetween11And14Years >= 11 && ageBetween11And14Years <= 14) {
+        } else if (ageLastTwoDigits >= 11 && ageLastTwoDigits <= 14) {
             System.out.printf("Вам %d лет%n", age);
         } else if (ageLastDigit == 1) {
             System.out.printf("Вам %d год%n", age);
@@ -27,4 +27,3 @@ public class Age {
         }
     }
 }
-
