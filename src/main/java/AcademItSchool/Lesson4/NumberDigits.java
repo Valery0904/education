@@ -18,7 +18,7 @@ public class NumberDigits {
             int digit = number % 10;
             digitsSum += digit;
 
-            if (digit % 2 == 1) {
+            if (digit % 2 != 0) {
                 oddDigitsSum += digit;
             }
 
