@@ -21,7 +21,7 @@ public class TriangleArea {
         System.out.print("Введите координату y3 для точки C: ");
         double y3 = scanner.nextDouble();
 
-        double epsilon = 1.0e-10;
+        final double epsilon = 1.0e-10;
 
         if (Math.abs((x2 - x1) * (y3 - y1) - (y2 - y1) * (x3 - x1)) <= epsilon) {
             System.out.println("Точки лежат на одной прямой");
@@ -31,8 +31,8 @@ public class TriangleArea {
             double cutCaLength = Math.sqrt(Math.pow(x1 - x3, 2) + Math.pow(y1 - y3, 2));
 
             double halfPerimeter = (cutAbLength + cutBcLength + cutCaLength) / 2;
-            double triangleArea = Math.sqrt(halfPerimeter * (halfPerimeter - cutAbLength) * (halfPerimeter -
-                    cutBcLength) * (halfPerimeter - cutCaLength));
+            double triangleArea = Math.sqrt(halfPerimeter * (halfPerimeter - cutAbLength) *
+                    (halfPerimeter - cutBcLength) * (halfPerimeter - cutCaLength));
 
             System.out.printf("Длина отрезка AB = %.2f%nДлина отрезка BC = %.2f%nДлина отрезка CA = %.2f%n", cutAbLength,
                     cutBcLength, cutCaLength);
