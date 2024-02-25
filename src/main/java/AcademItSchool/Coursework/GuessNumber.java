@@ -4,17 +4,23 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessNumber {
-    public static void main(String[] args) {
+    public static int generateRandomNumber(int min, int max) {
         Random random = new Random();
+        return min + random.nextInt((max - min) + 1);
+    }
 
-        System.out.println("Угадай число которое я загадал! Загаданное число находится в диапазоне от 1 до 100");
-        int randomNumber = random.nextInt(100);
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int min = 1;
+        int max = 100;
+
+        System.out.printf("Угадай число которое я загадал! Загаданное число находится в диапазоне от %d до %d%n", min, max);
+        int randomNumber = generateRandomNumber(min, max);
 
         int attemptsQuantity = 1;
 
         for (; ; ) {
-            Scanner scanner = new Scanner(System.in);
-
             System.out.print("Введи свое число: ");
             int number = scanner.nextInt();
 
