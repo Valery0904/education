@@ -3,10 +3,11 @@ package AcademItSchool.Coursework;
 import java.util.Scanner;
 
 public class Deposit {
-    public static double getDepositCalculation(double initialDeposit, int monthCount, double yearInterestRate) {
-        final int percent = 100;
+    public static double getCurrentDeposit(double initialDeposit, int monthCount, double yearInterestRate) {
+        final int oneHundredPercent = 100;
+        final int countMonthsInYear = 12;
 
-        double monthInterestRate = yearInterestRate / percent / 12;
+        double monthInterestRate = yearInterestRate / oneHundredPercent / countMonthsInYear;
         double currentDeposit = initialDeposit;
 
         for (int i = 1; i <= monthCount; i++) {
@@ -17,11 +18,6 @@ public class Deposit {
         return currentDeposit;
     }
 
-    public static double getProfit(double initialDeposit, double currentDeposit) {
-
-        return currentDeposit - initialDeposit;
-    }
-
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -29,15 +25,15 @@ public class Deposit {
         double initialDeposit = scanner.nextDouble();
 
         System.out.print("Введите срок (в месяцах): ");
-        int monthCount = scanner.nextInt();
+        int monthsCount = scanner.nextInt();
 
         System.out.print("Введите годовую процентную ставку: ");
         double yearInterestRate = scanner.nextDouble();
 
-        double currentDeposit = getDepositCalculation(initialDeposit, monthCount, yearInterestRate);
+        double currentDeposit = getCurrentDeposit(initialDeposit, monthsCount, yearInterestRate);
         System.out.printf("Сумма банковского вклада на конец периода составит: %.2f%n", currentDeposit);
 
-        double profit = getProfit(initialDeposit, currentDeposit);
+        double profit = currentDeposit - initialDeposit;
         System.out.printf("Ваша прибыль составит: %.2f", profit);
     }
 }
