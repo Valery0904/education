@@ -20,7 +20,7 @@ public class GuessNumber {
 
         int attemptsQuantity = 1;
 
-        for (; ; ) {
+        while (true) {
             System.out.print("Введи свое число: ");
             int number = scanner.nextInt();
 
