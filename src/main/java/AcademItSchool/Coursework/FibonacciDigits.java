@@ -6,19 +6,26 @@ public class FibonacciDigits {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите количество элементов числовой последовательности Фибоначчи: ");
-        int countFibonacciDigits = scanner.nextInt();
+        System.out.print("Введите индекс числа Фибоначчи: ");
+        int fibonacciNumberIndex = scanner.nextInt();
 
-        int fibonacciSequenceFirstNumber = 0;
-        int fibonacciSequenceSecondNumber = 1;
+        int fibonacciNumberIndex1 = 0;
+        int fibonacciNumberIndex2 = 1;
+        int fibonacciNumberNextIndex = 0;
 
-        System.out.printf("%d %d", fibonacciSequenceFirstNumber, fibonacciSequenceSecondNumber);
+        if (fibonacciNumberIndex == 1) {
+            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberIndex1);
+        } else if (fibonacciNumberIndex == 2) {
+            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberIndex2);
+        } else {
+            for (int i = 2; i < fibonacciNumberIndex; ++i) {
+                fibonacciNumberNextIndex = fibonacciNumberIndex1 + fibonacciNumberIndex2;
 
-        for (int i = 2; i < countFibonacciDigits; ++i) {
-            int fibonacciSequenceNextNumber = fibonacciSequenceFirstNumber + fibonacciSequenceSecondNumber;
-            System.out.printf(" %d", fibonacciSequenceNextNumber);
-            fibonacciSequenceFirstNumber = fibonacciSequenceSecondNumber;
-            fibonacciSequenceSecondNumber = fibonacciSequenceNextNumber;
+                fibonacciNumberIndex1 = fibonacciNumberIndex2;
+                fibonacciNumberIndex2 = fibonacciNumberNextIndex;
+            }
+
+            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberNextIndex);
         }
     }
 }
