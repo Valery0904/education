@@ -1,47 +1,47 @@
 package AcademItSchool.Lesson6;
 
 public class Overload {
-    public static int getTypeSize(byte a) {
+    public static int getTypeSize(byte number) {
         return 1;
     }
 
-    public static int getTypeSize(short a) {
+    public static int getTypeSize(short number) {
         return 2;
     }
 
-    public static int getTypeSize(int a) {
+    public static int getTypeSize(int number) {
         return 4;
     }
 
-    public static int getTypeSize(float a) {
+    public static int getTypeSize(float number) {
         return 4;
     }
 
-    public static int getTypeSize(long a) {
+    public static int getTypeSize(long number) {
         return 8;
     }
 
-    public static int getTypeSize(double a) {
+    public static int getTypeSize(double number) {
         return 8;
     }
 
     public static void main(String[] args) {
-        byte a = (byte) 1;
-        System.out.println("Количество байт, требуемых под переменную типа byte = " + getTypeSize(a) + " байт");
+        byte quantityBytesForByte = (byte) 1;
+        System.out.println("Количество байт, требуемых под переменную типа byte = " + getTypeSize(quantityBytesForByte) + " байт");
 
-        short b = (short) 5;
-        System.out.println("Количество байт, требуемых под переменную типа short = " + getTypeSize(b) + " байта");
+        short quantityBytesForShort = (short) 5;
+        System.out.println("Количество байт, требуемых под переменную типа short = " + getTypeSize(quantityBytesForShort) + " байта");
 
-        int c = 125;
-        System.out.println("Количество байт, требуемых под переменную типа int = " + getTypeSize(c) + " байта");
+        int quantityBytesForInt = 125;
+        System.out.println("Количество байт, требуемых под переменную типа int = " + getTypeSize(quantityBytesForInt) + " байта");
 
-        float d = (float) 5.5;
-        System.out.println("Количество байт, требуемых под переменную типа float = " + getTypeSize(d) + " байта");
+        float quantityBytesForFloat = (float) 5.5;
+        System.out.println("Количество байт, требуемых под переменную типа float = " + getTypeSize(quantityBytesForFloat) + " байта");
 
-        long e = 3252445;
-        System.out.println("Количество байт, требуемых под переменную типа long = " + getTypeSize(e) + " байт");
+        long quantityBytesForLong = 3252445;
+        System.out.println("Количество байт, требуемых под переменную типа long = " + getTypeSize(quantityBytesForLong) + " байт");
 
-        double f = 325.45;
-        System.out.println("Количество байт, требуемых под переменную типа double = " + getTypeSize(f) + " байт");
+        double quantityBytesForDouble = 325.45;
+        System.out.println("Количество байт, требуемых под переменную типа double = " + getTypeSize(quantityBytesForDouble) + " байт");
     }
 }
