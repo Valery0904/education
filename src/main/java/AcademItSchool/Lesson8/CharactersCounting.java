@@ -8,28 +8,29 @@ public class CharactersCounting {
 
         System.out.print("Введите строку: ");
         String enteredString = scanner.nextLine();
-        String string = enteredString.toLowerCase();
 
-        int numberCount = 0;
-        int letterCount = 0;
-        int whitespaceCount = 0;
-        int otherCharacterCount = 0;
+        int digitsCount = 0;
+        int lettersCount = 0;
+        int whitespacesCount = 0;
+        int otherCharactersCount = 0;
 
-        for (int i = 0; i < string.length(); i++) {
-            if (Character.isDigit(string.charAt(i))) {
-                numberCount++;
-            } else if (Character.isLetter(string.charAt(i))) {
-                letterCount++;
-            } else if (Character.isWhitespace(string.charAt(i))) {
-                whitespaceCount++;
+        for (int i = 0; i < enteredString.length(); i++) {
+            char symbol = enteredString.charAt(i);
+
+            if (Character.isDigit(symbol)) {
+                digitsCount++;
+            } else if (Character.isLetter(symbol)) {
+                lettersCount++;
+            } else if (Character.isWhitespace(symbol)) {
+                whitespacesCount++;
             } else {
-                otherCharacterCount++;
+                otherCharactersCount++;
             }
         }
 
-        System.out.println("Кол-во чисел = " + numberCount);
-        System.out.println("Кол-во букв = " + letterCount);
-        System.out.println("Кол-во пробелов = " + whitespaceCount);
-        System.out.println("Кол-во прочих символов = " + otherCharacterCount);
+        System.out.println("Кол-во чисел = " + digitsCount);
+        System.out.println("Кол-во букв = " + lettersCount);
+        System.out.println("Кол-во пробелов = " + whitespacesCount);
+        System.out.println("Кол-во прочих символов = " + otherCharactersCount);
     }
 }
