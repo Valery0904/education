@@ -2,7 +2,7 @@ package AcademItSchool.Coursework;
 
 import java.util.Scanner;
 
-public class MaximumSubstring {
+public class MaxSubstring {
     public static int getMaxSubstringLength(String string) {
         if (string.isEmpty()) { // Тут я сначала задал условие string.length() == 0, но idea подсвечивает ворнинг и предлагает заменить на isEmpty()
             return 0;
