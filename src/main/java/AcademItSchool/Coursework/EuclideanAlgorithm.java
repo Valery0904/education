@@ -3,29 +3,29 @@ package AcademItSchool.Coursework;
 import java.util.Scanner;
 
 public class EuclideanAlgorithm {
-    public static int getGcd(int a, int b) {
-        while (b != 0) {
-            int tmp = a % b;
-            a = b;
-            b = tmp;
+    public static int getGreatestCommonDivisor(int firstNumber, int secondNumber) {
+        while (secondNumber != 0) {
+            int temp = firstNumber % secondNumber;
+            firstNumber = secondNumber;
+            secondNumber = temp;
         }
 
-        return a;
+        return firstNumber;
     }
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите первое число: ");
-        int a = scanner.nextInt();
+        int firstNumber = scanner.nextInt();
 
         System.out.print("Введите второе число: ");
-        int b = scanner.nextInt();
+        int secondNumber = scanner.nextInt();
 
-        if (a == 0 && b == 0) {
+        if (firstNumber == 0 && secondNumber == 0) {
             System.out.println("Оба числа равны нулю, НОД искать нельзя");
         } else {
-            System.out.printf("НОД: %d", getGcd(a, b));
+            System.out.printf("НОД: %d", getGreatestCommonDivisor(firstNumber, secondNumber));
         }
     }
 }
