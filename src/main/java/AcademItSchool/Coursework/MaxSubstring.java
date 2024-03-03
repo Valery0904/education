@@ -32,7 +32,7 @@ public class MaxSubstring {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите строку: ");
-        String string = scanner.nextLine();
+        String string = scanner.nextLine().toLowerCase();
 
         System.out.println("Длина максимальной подстроки = " + getMaxSubstringLength(string));
     }
