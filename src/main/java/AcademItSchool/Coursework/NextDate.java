@@ -16,11 +16,12 @@ public class NextDate {
         int year = scanner.nextInt();
 
         int daysInMonthAmount = 31;
-        boolean isLeapYear = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
 
         if (month == 4 || month == 6 || month == 9 || month == 11) {
             daysInMonthAmount = 30;
         } else if (month == 2) {
+            boolean isLeapYear = year % 400 == 0 || (year % 4 == 0 && year % 100 != 0);
+
             if (isLeapYear) {
                 daysInMonthAmount = 29;
             } else {
