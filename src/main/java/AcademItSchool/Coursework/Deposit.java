@@ -3,14 +3,14 @@ package AcademItSchool.Coursework;
 import java.util.Scanner;
 
 public class Deposit {
-    public static double getCurrentDeposit(double initialDeposit, int monthCount, double yearInterestRate) {
-        final int oneHundredPercent = 100;
-        final int countMonthsInYear = 12;
+    public static double getCurrentDeposit(double initialDeposit, int monthsCount, double yearInterestRate) {
+        final int hundredPercent = 100;
+        final int monthsInYearCount = 12;
 
-        double monthInterestRate = yearInterestRate / oneHundredPercent / countMonthsInYear;
+        double monthInterestRate = yearInterestRate / hundredPercent / monthsInYearCount;
         double currentDeposit = initialDeposit;
 
-        for (int i = 1; i <= monthCount; i++) {
+        for (int i = 1; i <= monthsCount; i++) {
             double monthProfit = currentDeposit * monthInterestRate;
             currentDeposit += monthProfit;
         }
