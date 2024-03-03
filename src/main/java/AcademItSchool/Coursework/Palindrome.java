@@ -1,4 +1,4 @@
-package AcademItSchool.Lesson8;
+package AcademItSchool.Coursework;
 
 import java.util.Scanner;
 
