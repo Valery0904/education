@@ -6,12 +6,12 @@ public class Palindrome {
     public static boolean isPalindrome(String string) {
 
         for (int i = 0, j = string.length() - 1; i < j; i++, j--) {
-            if(!Character.isLetter(string.charAt(i))) {
+            if (!Character.isLetter(string.charAt(i))) {
                 j++;
                 continue;
             }
 
-            if (!Character.isLetter(string.charAt(j))){
+            if (!Character.isLetter(string.charAt(j))) {
                 i--;
                 continue;
             }
