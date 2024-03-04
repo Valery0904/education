@@ -8,14 +8,15 @@ public class MaxSubstring {
             return 0;
         }
 
+        String stringToLowerCase = string.toLowerCase();
         int maxSubstringLength = 0;
         int currentSubstringLength = 1;
 
-        for (int i = 0; i < string.length() - 1; i++) {
-            char symbol = string.charAt(i);
-            char nextSymbol = string.charAt(i + 1);
+        for (int i = 0; i < stringToLowerCase.length() - 1; i++) {
+            char currentSymbol = stringToLowerCase.charAt(i);
+            char nextSymbol = stringToLowerCase.charAt(i + 1);
 
-            if (symbol == nextSymbol) {
+            if (currentSymbol == nextSymbol) {
                 currentSubstringLength++;
             } else if (currentSubstringLength > maxSubstringLength) {
                 maxSubstringLength = currentSubstringLength;
@@ -32,7 +33,7 @@ public class MaxSubstring {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите строку: ");
-        String string = scanner.nextLine().toLowerCase();
+        String string = scanner.nextLine();
 
         System.out.println("Длина максимальной подстроки = " + getMaxSubstringLength(string));
     }
