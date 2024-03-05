@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class Palindrome {
     public static boolean isPalindrome(String string) {
-
         for (int i = 0, j = string.length() - 1; i < j; i++, j--) {
             if (!Character.isLetter(string.charAt(i))) {
                 j++;
@@ -20,6 +19,7 @@ public class Palindrome {
                 return false;
             }
         }
+
         return true;
     }
 
@@ -29,9 +29,7 @@ public class Palindrome {
         System.out.print("Введите строку: ");
         String string = scanner.nextLine().toLowerCase();
 
-        boolean stringIsPalindrome = isPalindrome(string);
-
-        if (stringIsPalindrome) {
+        if (isPalindrome(string)) {
             System.out.println("Строка является палиндромом.");
         } else {
             System.out.println("Строка не является палиндромом.");
