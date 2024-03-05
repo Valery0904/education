@@ -9,23 +9,20 @@ public class FibonacciDigits {
         System.out.print("Введите индекс числа Фибоначчи: ");
         int fibonacciNumberIndex = scanner.nextInt();
 
-        int fibonacciNumberIndex1 = 0;
-        int fibonacciNumberIndex2 = 1;
-        int fibonacciNumberNextIndex = 1;
-
-        if (fibonacciNumberIndex == 1) {
-            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberIndex1);
-        } else if (fibonacciNumberIndex == 2) {
-            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberIndex2);
+        if (fibonacciNumberIndex == 1 || fibonacciNumberIndex == 2) {
+            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, 1);
         } else {
-            for (int i = 2; i <= fibonacciNumberIndex; ++i) {
-                fibonacciNumberNextIndex = fibonacciNumberIndex1 + fibonacciNumberIndex2;
+            int previousFibonacciNumber = 0;
+            int currentFibonacciNumber = 1;
+            int nextFibonacciNumber = 0;
 
-                fibonacciNumberIndex1 = fibonacciNumberIndex2;
-                fibonacciNumberIndex2 = fibonacciNumberNextIndex;
+            for (int i = 2; i <= fibonacciNumberIndex; ++i) {
+                nextFibonacciNumber = previousFibonacciNumber + currentFibonacciNumber;
+                previousFibonacciNumber = currentFibonacciNumber;
+                currentFibonacciNumber = nextFibonacciNumber;
             }
 
-            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberNextIndex);
+            System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, nextFibonacciNumber);
         }
     }
 }
