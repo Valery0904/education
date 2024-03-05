@@ -11,14 +11,14 @@ public class FibonacciDigits {
 
         int fibonacciNumberIndex1 = 0;
         int fibonacciNumberIndex2 = 1;
-        int fibonacciNumberNextIndex = 0;
+        int fibonacciNumberNextIndex = 1;
 
         if (fibonacciNumberIndex == 1) {
             System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberIndex1);
         } else if (fibonacciNumberIndex == 2) {
             System.out.printf("Число Фибоначчи с индексом %d = %d%n", fibonacciNumberIndex, fibonacciNumberIndex2);
         } else {
-            for (int i = 2; i < fibonacciNumberIndex; ++i) {
+            for (int i = 2; i <= fibonacciNumberIndex; ++i) {
                 fibonacciNumberNextIndex = fibonacciNumberIndex1 + fibonacciNumberIndex2;
 
                 fibonacciNumberIndex1 = fibonacciNumberIndex2;
