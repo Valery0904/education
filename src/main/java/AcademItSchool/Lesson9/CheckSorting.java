@@ -22,7 +22,7 @@ public class CheckSorting {
     }
 
     public static void main(String[] args) {
-        int[] arraySortedAscending = new int[]{1, 2, 3, 4, 5};
+        int[] arraySortedAscending = {1, 2, 3, 4, 5};
 
         if (isSortedAscending(arraySortedAscending)) {
             System.out.println("Массив отсортирован по возрастанию");
@@ -35,7 +35,7 @@ public class CheckSorting {
         if (isSortedDescending(arraySortedDescending)) {
             System.out.println("Массив отсортирован по убыванию");
         } else {
-            System.out.println("Массив неотсортирован");
+            System.out.println("Массив не отсортирован");
         }
     }
 }
