@@ -30,7 +30,9 @@ public class BinarySearch {
 
             if (number == array[middle]) {
                 return middle;
-            } else if (number > array[middle]) {
+            }
+
+            if (number > array[middle]) {
                 left = middle + 1;
             } else {
                 right = middle - 1;
@@ -43,7 +45,7 @@ public class BinarySearch {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
 
         System.out.print("Введите число индекс которого хотите найти: ");
         int number = scanner.nextInt();
