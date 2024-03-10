@@ -2,7 +2,7 @@ package AcademItSchool.Coursework;
 
 import java.util.Scanner;
 
-public class FibonacciDigits {
+public class FibonacciNumbers {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
