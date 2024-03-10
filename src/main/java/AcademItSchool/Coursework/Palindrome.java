@@ -15,7 +15,7 @@ public class Palindrome {
                 continue;
             }
 
-            if (string.charAt(i) != string.charAt(j)) {
+            if (Character.toLowerCase(string.charAt(i)) != Character.toLowerCase(string.charAt(j))) {
                 return false;
             }
         }
@@ -27,7 +27,7 @@ public class Palindrome {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Введите строку: ");
-        String string = scanner.nextLine().toLowerCase();
+        String string = scanner.nextLine();
 
         if (isPalindrome(string)) {
             System.out.println("Строка является палиндромом.");
