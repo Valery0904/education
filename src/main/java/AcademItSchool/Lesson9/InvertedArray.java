@@ -4,7 +4,9 @@ import java.util.Arrays;
 
 public class InvertedArray {
     public static int[] getInvertedArray(int[] array) {
-        for (int i = 0, j = array.length - 1; i < array.length / 2; i++, j--) {
+        int arrayHalf = array.length / 2;
+
+        for (int i = 0, j = array.length - 1; i < arrayHalf; i++, j--) {
             int temp = array[i];
             array[i] = array[j];
             array[j] = temp;
