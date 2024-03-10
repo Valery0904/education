@@ -20,7 +20,7 @@ public class QuadraticEquation {
         if (Math.abs(a) < EPSILON) {
             if (Math.abs(b) < EPSILON) {
                 if (Math.abs(c) < EPSILON) {
-                    System.out.println("Уравнение имеет множество решений");
+                    System.out.println("Уравнение имеет бесконечное число решений");
                 } else {
                     System.out.println("Уравнение не имеет решения");
                 }
@@ -34,7 +34,7 @@ public class QuadraticEquation {
             if (Math.abs(discriminant) < EPSILON) {
                 double x = -b / (2 * a);
                 System.out.printf("Корень x = %.2f", x);
-            } else if (discriminant > 0) {
+            } else if (discriminant > EPSILON) {
                 double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
                 double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
                 System.out.printf("Корень x1 = %.2f%nКорень x2 = %.2f", x1, x2);
