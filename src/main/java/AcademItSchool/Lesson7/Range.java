@@ -2,8 +2,8 @@ package AcademItSchool.Lesson7;
 
 public class Range {
     private static final double EPSILON = 1.0e-10;
-    double from;
-    double to;
+    private double from;
+    private double to;
 
     public Range(double from, double to) {
         this.from = from;
@@ -14,18 +14,16 @@ public class Range {
         return from;
     }
 
-    public double setFrom(double from) {
-        from = from;
-        return from;
+    public void setFrom(double from) {
+        this.from = from;
     }
 
     public double getTo() {
         return to;
     }
 
-    public double setTo(double to) {
-        to = to;
-        return to;
+    public void setTo(double to) {
+        this.to = to;
     }
 
     public double getLength() {
