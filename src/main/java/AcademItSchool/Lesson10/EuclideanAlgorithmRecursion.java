@@ -8,11 +8,9 @@ public class EuclideanAlgorithmRecursion {
             return number1;
         }
 
-        while (number2 != 0) {
-            int temp = number1 % number2;
-            number1 = number2;
-            number2 = temp;
-        }
+        int temp = number1 % number2;
+        number1 = number2;
+        number2 = temp;
 
         return getGreatestCommonDivisorRecursively(number1, number2);
     }
