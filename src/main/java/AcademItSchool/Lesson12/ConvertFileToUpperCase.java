@@ -10,8 +10,8 @@ public class ConvertFileToUpperCase {
         try (Scanner scanner = new Scanner(new FileInputStream("input.txt"));
              PrintWriter writer = new PrintWriter("output.txt")) {
             while (scanner.hasNextLine()) {
-                String string = scanner.nextLine();
-                writer.println(string.toUpperCase());
+                String line = scanner.nextLine();
+                writer.println(line.toUpperCase());
             }
         }
     }
