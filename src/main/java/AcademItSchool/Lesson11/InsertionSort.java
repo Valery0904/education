@@ -2,7 +2,7 @@ package AcademItSchool.Lesson11;
 
 import java.util.Arrays;
 
-public class InsertionSorting {
+public class InsertionSort {
     public static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
