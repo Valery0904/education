@@ -2,8 +2,8 @@ package AcademItSchool.Lesson11;
 
 import java.util.Arrays;
 
-public class InsertSorting {
-    public static void insertSort(int[] array) {
+public class InsertionSorting {
+    public static void insertionSort(int[] array) {
         for (int i = 1; i < array.length; i++) {
             int temp = array[i];
             int j;
@@ -23,7 +23,7 @@ public class InsertSorting {
     public static void main(String[] args) {
         int[] array = {2, 6, 5, 1, 3, 8, 10, 9, 4, 7};
 
-        insertSort(array);
+        insertionSort(array);
 
         System.out.println(Arrays.toString(array));
     }
