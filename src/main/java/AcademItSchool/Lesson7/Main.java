@@ -15,9 +15,9 @@ public class Main {
         System.out.print("Введите число которое хотите проверить: ");
         double number = scanner.nextDouble();
 
-        Range range = new Range(from, to);
+        Range range = new Range(from,to);
 
-        System.out.printf("Длина числового диапазона от %.2f до %.2f = %.2f%n", from, to, range.getLength());
+        System.out.printf("Длина числового диапазона от %.2f до %.2f = %.2f%n", range.getFrom(), range.getTo(), range.getLength());
 
         if (range.isInside(number)) {
             System.out.printf("Число %.2f принадлежит диапазону", number);
