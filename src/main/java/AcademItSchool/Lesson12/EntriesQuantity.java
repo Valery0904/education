@@ -9,7 +9,6 @@ public class EntriesQuantity {
         try (Scanner scanner = new Scanner(new FileInputStream("input.txt"))) {
             searchString = searchString.toUpperCase();
 
-            int startSearchIndex = -1;
             int entriesCount = 0;
 
             while (scanner.hasNextLine()) {
@@ -21,14 +20,9 @@ public class EntriesQuantity {
 
                 int substringEntryIndex = 0;
 
-                while (substringEntryIndex != -1) {
-                    substringEntryIndex = string.indexOf(searchString, startSearchIndex + searchString.length());
-
-                    if (substringEntryIndex != -1) {
-                        startSearchIndex += (startSearchIndex + searchString.length());
-                        entriesCount++;
-                    }
-
+                while ((substringEntryIndex = string.indexOf(searchString, substringEntryIndex)) != -1) {
+                    substringEntryIndex += searchString.length();
+                    entriesCount++;
                 }
             }
 
