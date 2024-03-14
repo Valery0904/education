@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class ConvertToBlackAndWhite {
+public class ConvertImageToBlackAndWhite {
     public static void main(String[] args) throws IOException {
         // читаем картинку из файла image.jpg в объект класса BufferedImage
         BufferedImage image = ImageIO.read(new File("image.jpg"));
