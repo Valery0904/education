@@ -4,15 +4,7 @@ import java.util.Scanner;
 
 public class EuclideanAlgorithmRecursion {
     public static int getGreatestCommonDivisorRecursively(int number1, int number2) {
-        if (number2 == 0) {
-            return number1;
-        }
-
-        int temp = number1 % number2;
-        number1 = number2;
-        number2 = temp;
-
-        return getGreatestCommonDivisorRecursively(number1, number2);
+        return number2 == 0 ? number1 : getGreatestCommonDivisorRecursively(number2, number1 / number2);
     }
 
     public static void main(String[] args) {
