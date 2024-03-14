@@ -1,6 +1,6 @@
 package AcademItSchool.Lesson12;
 
-public class URL {
+public class Url {
     public static String getServerName(String url) {
         int startIndex = url.indexOf("://");
 
@@ -17,7 +17,6 @@ public class URL {
         }
 
         return url.substring(startIndex, endIndex);
-
     }
 
     public static void main(String[] args) {
