@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class QuickSort {
     public static void quickSort(int[] array, int left, int right) {
-        if (array.length == 0 || left >= right) {
+        if (left >= right) {
             return;
         }
 
