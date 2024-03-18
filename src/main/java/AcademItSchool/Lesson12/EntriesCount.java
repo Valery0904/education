@@ -4,7 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class EntriesQuantity {
+public class EntriesCount {
     public static int getEntriesCount(String searchString, String pathToFile) throws FileNotFoundException {
         try (Scanner scanner = new Scanner(new FileInputStream(pathToFile))) {
             searchString = searchString.toUpperCase();
