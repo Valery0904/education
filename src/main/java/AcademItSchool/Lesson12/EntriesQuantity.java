@@ -5,8 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class EntriesQuantity {
-    public static int getCountEntries(String searchString) throws FileNotFoundException {
-        try (Scanner scanner = new Scanner(new FileInputStream("input.txt"))) {
+    public static int getEntriesCount(String searchString, String pathToFile) throws FileNotFoundException {
+        try (Scanner scanner = new Scanner(new FileInputStream(pathToFile))) {
             searchString = searchString.toUpperCase();
 
             int entriesCount = 0;
@@ -36,7 +36,8 @@ public class EntriesQuantity {
         System.out.print("Введите строку, которую хотите найти: ");
         String searchString = scanner.nextLine();
 
-        int entriesCount = getCountEntries(searchString);
-        System.out.println("Кол-во вхождений = " + entriesCount);
+        String pathToFile = "input.txt";
+
+        System.out.println("Кол-во вхождений = " + getEntriesCount(searchString, pathToFile));
     }
 }
