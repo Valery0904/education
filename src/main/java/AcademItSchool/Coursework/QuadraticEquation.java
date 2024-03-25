@@ -31,10 +31,10 @@ public class QuadraticEquation {
         } else {
             double discriminant = Math.pow(b, 2) - 4 * a * c;
 
-            if (Math.abs(discriminant) <= EPSILON) {
+            if (Math.abs(discriminant) < EPSILON) {
                 double x = -b / (2 * a);
                 System.out.printf("Корень x = %.2f", x);
-            } else if (discriminant >= EPSILON) {
+            } else if (discriminant > EPSILON) {
                 double x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
                 double x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
                 System.out.printf("Корень x1 = %.2f%nКорень x2 = %.2f", x1, x2);
