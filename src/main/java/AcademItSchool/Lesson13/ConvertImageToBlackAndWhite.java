@@ -33,7 +33,7 @@ public class ConvertImageToBlackAndWhite {
                 // получаем текущий пиксель с координатами (x, y) - его цвета кладутся в массив pixel
                 raster.getPixel(x, y, pixel);
 
-                int blackAndWhiteColor = (int) Math.round(0.33 * pixel[0] + 0.59 * pixel[1] + 0.11 * pixel[2]);
+                int blackAndWhiteColor = (int) Math.round(0.3 * pixel[0] + 0.59 * pixel[1] + 0.11 * pixel[2]);
                 Arrays.fill(pixel, blackAndWhiteColor);
 
                 // записываем значения цветов для пикселя в картинку
