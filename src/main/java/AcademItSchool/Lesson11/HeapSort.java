@@ -18,29 +18,30 @@ public class HeapSort {
     }
 
     public static void sift(int[] array, int arrayLength, int i) {
-        int maxElement = i;
-        int leftChild = 2 * i + 1;
+        int indexMaxElement = i;
+        int indexLeftChild = 2 * i + 1;
         int rightChild = 2 * i + 2;
 
-        while (leftChild < arrayLength || rightChild < arrayLength) {
-            if (leftChild < arrayLength && array[leftChild] > array[maxElement]) {
-                maxElement = leftChild;
+        while (indexLeftChild < arrayLength || rightChild < arrayLength) {
+
+            if (indexLeftChild < arrayLength && array[indexLeftChild] > array[indexMaxElement]) {
+                indexMaxElement = indexLeftChild;
             }
 
-            if (rightChild < arrayLength && array[rightChild] > array[maxElement]) {
-                maxElement = rightChild;
+            if (rightChild < arrayLength && array[rightChild] > array[indexMaxElement]) {
+                indexMaxElement = rightChild;
             }
 
-            if (maxElement != i) {
+            if (indexMaxElement != i) {
                 int temp = array[i];
-                array[i] = array[maxElement];
-                array[maxElement] = temp;
+                array[i] = array[indexMaxElement];
+                array[indexMaxElement] = temp;
 
-                i = maxElement;
-                leftChild = 2 * i + 1;
+                i = indexMaxElement;
+                indexLeftChild = 2 * i + 1;
                 rightChild = 2 * i + 2;
             } else {
-                break;
+                return;
             }
         }
     }
@@ -53,4 +54,3 @@ public class HeapSort {
         System.out.println(Arrays.toString(array));
     }
 }
-
