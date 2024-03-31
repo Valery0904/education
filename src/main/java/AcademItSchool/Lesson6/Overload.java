@@ -26,22 +26,22 @@ public class Overload {
     }
 
     public static void main(String[] args) {
-        byte quantityBytesForByte = (byte) 1;
-        System.out.println("Количество байт, требуемых под переменную типа byte = " + getTypeSize(quantityBytesForByte) + " байт");
+        byte typeByte = 1;
+        System.out.println("Количество байт, требуемых под переменную типа byte = " + getTypeSize(typeByte) + " байт");
 
-        short quantityBytesForShort = (short) 5;
-        System.out.println("Количество байт, требуемых под переменную типа short = " + getTypeSize(quantityBytesForShort) + " байта");
+        short typeShort = 5;
+        System.out.println("Количество байт, требуемых под переменную типа short = " + getTypeSize(typeShort) + " байта");
 
-        int quantityBytesForInt = 125;
-        System.out.println("Количество байт, требуемых под переменную типа int = " + getTypeSize(quantityBytesForInt) + " байта");
+        int typeInt = 125;
+        System.out.println("Количество байт, требуемых под переменную типа int = " + getTypeSize(typeInt) + " байта");
 
-        float quantityBytesForFloat = (float) 5.5;
-        System.out.println("Количество байт, требуемых под переменную типа float = " + getTypeSize(quantityBytesForFloat) + " байта");
+        float typeFloat = 5.5f;
+        System.out.println("Количество байт, требуемых под переменную типа float = " + getTypeSize(typeFloat) + " байта");
 
-        long quantityBytesForLong = 3252445;
-        System.out.println("Количество байт, требуемых под переменную типа long = " + getTypeSize(quantityBytesForLong) + " байт");
+        long typeLong = 3252445;
+        System.out.println("Количество байт, требуемых под переменную типа long = " + getTypeSize(typeLong) + " байт");
 
-        double quantityBytesForDouble = 325.45;
-        System.out.println("Количество байт, требуемых под переменную типа double = " + getTypeSize(quantityBytesForDouble) + " байт");
+        double typeDouble = 325.45;
+        System.out.println("Количество байт, требуемых под переменную типа double = " + getTypeSize(typeDouble) + " байт");
     }
 }

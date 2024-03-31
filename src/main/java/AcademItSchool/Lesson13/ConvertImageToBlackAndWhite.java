@@ -20,7 +20,6 @@ public class ConvertImageToBlackAndWhite {
         int height = raster.getHeight();
 
         final int COLORS_COUNT_IN_RGB = 3;
-        //final int MAX_RGB = 255;
 
         // создаем массив, в котором будет содержаться текущий пиксель
         // это массив из 3 элементов, в нем по очереди лежат числа R, G, B
@@ -34,12 +33,8 @@ public class ConvertImageToBlackAndWhite {
                 // получаем текущий пиксель с координатами (x, y) - его цвета кладутся в массив pixel
                 raster.getPixel(x, y, pixel);
 
-                double red = 0.33 * pixel[0];
-                double green = 0.59 * pixel[1];
-                double blue = 0.11 * pixel[2];
-
-                // инвертируем цвет для каждой компоненты, т.е. делаем 255 минус текущее значение
-                Arrays.fill(pixel, (int) (red + green + blue));
+                int blackAndWhiteColor = (int) Math.round(0.3 * pixel[0] + 0.59 * pixel[1] + 0.11 * pixel[2]);
+                Arrays.fill(pixel, blackAndWhiteColor);
 
                 // записываем значения цветов для пикселя в картинку
                 raster.setPixel(x, y, pixel);

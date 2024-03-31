@@ -2,13 +2,13 @@ package AcademItSchool.Lesson12;
 
 public class Url {
     public static String getServerName(String url) {
-        int startIndex = url.indexOf("://");
+        int substringStartIndex = url.indexOf("://");
 
-        if (startIndex == -1) {
+        if (substringStartIndex == -1) {
             return null;
         }
 
-        startIndex += 3;
+        int startIndex = substringStartIndex + 3;
 
         int endIndex = url.indexOf("/", startIndex);
 

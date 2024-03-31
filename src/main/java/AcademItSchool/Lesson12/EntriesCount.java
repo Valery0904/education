@@ -4,23 +4,23 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class EntriesQuantity {
-    public static int getCountEntries(String searchString) throws FileNotFoundException {
-        try (Scanner scanner = new Scanner(new FileInputStream("input.txt"))) {
+public class EntriesCount {
+    public static int getEntriesCount(String searchString, String filePath) throws FileNotFoundException {
+        try (Scanner scanner = new Scanner(new FileInputStream(filePath))) {
             searchString = searchString.toUpperCase();
 
             int entriesCount = 0;
 
             while (scanner.hasNextLine()) {
-                String string = scanner.nextLine().toUpperCase();
+                String line = scanner.nextLine().toUpperCase();
 
-                if (string.isEmpty()) {
+                if (line.isEmpty()) {
                     continue;
                 }
 
                 int substringEntryIndex = 0;
 
-                while ((substringEntryIndex = string.indexOf(searchString, substringEntryIndex)) != -1) {
+                while ((substringEntryIndex = line.indexOf(searchString, substringEntryIndex)) != -1) {
                     substringEntryIndex += searchString.length();
                     entriesCount++;
                 }
@@ -36,7 +36,8 @@ public class EntriesQuantity {
         System.out.print("Введите строку, которую хотите найти: ");
         String searchString = scanner.nextLine();
 
-        int entriesCount = getCountEntries(searchString);
-        System.out.println("Кол-во вхождений = " + entriesCount);
+        String filePath = "input.txt";
+
+        System.out.println("Кол-во вхождений = " + getEntriesCount(searchString, filePath));
     }
 }

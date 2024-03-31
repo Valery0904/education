@@ -2,9 +2,9 @@ package AcademItSchool.Lesson10;
 
 import java.util.Scanner;
 
-public class EuclideanAlgorithmRecursion {
+public class EuclideanAlgorithmRecursively {
     public static int getGreatestCommonDivisorRecursively(int number1, int number2) {
-        return number2 == 0 ? number1 : getGreatestCommonDivisorRecursively(number2, number1 / number2);
+        return number2 == 0 ? number1 : getGreatestCommonDivisorRecursively(number2, number1 % number2);
     }
 
     public static void main(String[] args) {
