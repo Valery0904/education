@@ -26,22 +26,22 @@ public class Overload {
     }
 
     public static void main(String[] args) {
-        byte numberByte = 1;
-        System.out.println("Количество байт, требуемых под переменную типа byte = " + getTypeSize(numberByte) + " байт");
+        byte byteNumber = 1;
+        System.out.println("Количество байт, требуемых под переменную типа byte = " + getTypeSize(byteNumber) + " байт");
 
-        short numberShort = 5;
-        System.out.println("Количество байт, требуемых под переменную типа short = " + getTypeSize(numberShort) + " байта");
+        short shortNumber = 5;
+        System.out.println("Количество байт, требуемых под переменную типа short = " + getTypeSize(shortNumber) + " байта");
 
-        int numberInt = 125;
-        System.out.println("Количество байт, требуемых под переменную типа int = " + getTypeSize(numberInt) + " байта");
+        int intNumber = 125;
+        System.out.println("Количество байт, требуемых под переменную типа int = " + getTypeSize(intNumber) + " байта");
 
-        float numberFloat = 5.5f;
-        System.out.println("Количество байт, требуемых под переменную типа float = " + getTypeSize(numberFloat) + " байта");
+        float floatNumber = 5.5f;
+        System.out.println("Количество байт, требуемых под переменную типа float = " + getTypeSize(floatNumber) + " байта");
 
-        long numberLong = 3252445;
-        System.out.println("Количество байт, требуемых под переменную типа long = " + getTypeSize(numberLong) + " байт");
+        long longNumber = 3252445;
+        System.out.println("Количество байт, требуемых под переменную типа long = " + getTypeSize(longNumber) + " байт");
 
-        double numberDouble = 325.45;
-        System.out.println("Количество байт, требуемых под переменную типа double = " + getTypeSize(numberDouble) + " байт");
+        double doubleNumber = 325.45;
+        System.out.println("Количество байт, требуемых под переменную типа double = " + getTypeSize(doubleNumber) + " байт");
     }
 }
