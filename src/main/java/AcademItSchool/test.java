@@ -1,4 +1,4 @@
-package AcademItSchool.Coursework;
+package AcademItSchool;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -7,15 +7,10 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class Blur {
+public class test {
     public static int saturate(double value) {
-        if (value <= 0) {
-            return 0;
-        }
-
-        if (value >= 255) {
-            return 255;
-        }
+        if (value <= 0) return 0;
+        if (value >= 255) return 255;
         return (int) Math.round(value);
     }
 
@@ -67,6 +62,6 @@ public class Blur {
             }
         }
 
-        ImageIO.write(outputImage, "jpg", new File("out.jpg"));
+        ImageIO.write(outputImage, "jpg", new File("out2.jpg"));
     }
 }
