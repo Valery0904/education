@@ -19,27 +19,27 @@ public class HeapSort {
 
     public static void sift(int[] array, int arrayLength, int i) {
         while (true) {
-            int indexMaxElement = i;
-            int indexLeftChild = 2 * i + 1;
-            int indexRightChild = 2 * i + 2;
+            int maxElementIndex = i;
+            int leftChildIndex = 2 * i + 1;
+            int rightChildIndex = 2 * i + 2;
 
-            if (indexLeftChild < arrayLength && array[indexLeftChild] > array[indexMaxElement]) {
-                indexMaxElement = indexLeftChild;
+            if (leftChildIndex < arrayLength && array[leftChildIndex] > array[maxElementIndex]) {
+                maxElementIndex = leftChildIndex;
             }
 
-            if (indexRightChild < arrayLength && array[indexRightChild] > array[indexMaxElement]) {
-                indexMaxElement = indexRightChild;
+            if (rightChildIndex < arrayLength && array[rightChildIndex] > array[maxElementIndex]) {
+                maxElementIndex = rightChildIndex;
             }
 
-            if (indexMaxElement == i) {
-                break;
+            if (maxElementIndex == i) {
+                return;
             }
 
             int temp = array[i];
-            array[i] = array[indexMaxElement];
-            array[indexMaxElement] = temp;
+            array[i] = array[maxElementIndex];
+            array[maxElementIndex] = temp;
 
-            i = indexMaxElement;
+            i = maxElementIndex;
         }
     }
 
