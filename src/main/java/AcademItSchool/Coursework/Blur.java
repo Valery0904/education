@@ -27,7 +27,7 @@ public class Blur {
         int width = inputImage.getWidth();
         int height = inputImage.getHeight();
 
-        BufferedImage outputImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        BufferedImage outputImage = new BufferedImage(width, height, inputImage.getType());
         WritableRaster outputRaster = outputImage.getRaster();
 
         int matrixSize = 3;
@@ -44,31 +44,29 @@ public class Blur {
         int[] pixel = new int[COLORS_COUNT_IN_RGB];
         double[] outputPixel = new double[COLORS_COUNT_IN_RGB];
 
-        int indentation = matrixSize / 2;
-        int widthIndent = width - indentation;
-        int heightIndent = height - indentation;
+        int indent = matrixSize / 2;
+        int yUpperLimit = width - indent;
+        int xUpperLimit = height - indent;
 
-        for (int y = indentation; y < heightIndent; ++y) {
-            for (int x = indentation; x < widthIndent; ++x) {
-                outputPixel[0] = 0;
-                outputPixel[1] = 0;
-                outputPixel[2] = 0;
+        for (int y = indent; y < yUpperLimit; ++y) {
+            for (int x = indent; x < xUpperLimit; ++x) {
+                Arrays.fill(outputPixel, 0);
 
-                for (int i = 0, pixelXPosition = x - indentation; i < matrixSize; ++i, ++pixelXPosition) {
-                    for (int j = 0, pixelYPosition = y - indentation; j < matrixSize; ++j, ++pixelYPosition) {
-                        inputRaster.getPixel(pixelXPosition, pixelYPosition, pixel);
+                for (int i = 0, pixelYNeighbor = y - indent; i < matrixSize; ++i, ++pixelYNeighbor) {
+                    for (int j = 0, pixelXNeighbor = x - indent; j < matrixSize; ++j, ++pixelXNeighbor) {
+                        inputRaster.getPixel(pixelYNeighbor, pixelXNeighbor, pixel);
 
                         for (int k = 0; k < COLORS_COUNT_IN_RGB; k++) {
-                            outputPixel[k] += pixel[k] * matrix[i][j];
+                            outputPixel[k] += pixel[k] * matrix[j][i];
                         }
                     }
                 }
 
                 for (int i = 0; i < COLORS_COUNT_IN_RGB; i++) {
-                    outputPixel[i] = saturate(outputPixel[i]);
+                    pixel[i] = saturate(outputPixel[i]);
                 }
 
-                outputRaster.setPixel(x, y, outputPixel);
+                outputRaster.setPixel(y, x, pixel);
             }
         }
 
